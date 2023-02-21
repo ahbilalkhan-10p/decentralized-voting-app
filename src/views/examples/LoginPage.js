@@ -81,8 +81,8 @@ const getCandidates = async (e) => {
   // console.log(cnic);
   // console.log(pin);
     const result = await RemixContract.methods
-      .ValidateVoter(cnic,pin).
-      call().then(setIsValid)
+      .ValidateVoter(cnic,pin)
+      .call().then(setIsValid)
       
       if(!result){
         setErrorMessage("Voter not valid");
